@@ -12,13 +12,13 @@ namespace WebApplication.Models
         public Entity2ViewModel(Entity2 entity)
         {
             this.Id = entity.Id;
-            this.Property1 = entity.Property1;
-            this.Property2 = entity.Property2;
+            this.name = entity.Property1;
+            this.zoom = entity.Property2;
         }
 
         public int Id { get; set; }
-        public string Property1 { get; set; }
-        public string Property2 { get; set; }
+        public string name { get; set; }
+        public string zoom { get; set; }
 
         public List<Entity1ViewModel> Entity1 { get; set; }
     }

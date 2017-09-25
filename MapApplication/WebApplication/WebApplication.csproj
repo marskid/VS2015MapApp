@@ -62,6 +62,8 @@
     <Content Include="App_Data\Database1_log.ldf">
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\main.js" />
     <Content Include="Web.config" />
     <Content Include="Index.aspx" />
     <Content Include="WebService.asmx" />
@@ -83,6 +85,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Scripts\jquery-1.12.1.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

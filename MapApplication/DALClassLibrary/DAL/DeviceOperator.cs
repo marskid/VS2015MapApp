@@ -27,9 +27,16 @@ namespace DALClassLibrary.DAL
                     Property2 = p5
                 }
             };
-            db.Entity1.Add(entity);
+            entity = db.Entity1.Add(entity);
+
             db.SaveChanges();
+
             return entity;
+        }
+
+        public List<Models.Entity1> GetAll()
+        {
+            return db.Entity1.ToList();
         }
     }
 }
