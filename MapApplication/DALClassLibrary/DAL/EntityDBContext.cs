@@ -6,7 +6,7 @@ using System.Data.Entity;
 
 namespace DALClassLibrary
 {
-    class EntityDBContext: DbContext
+    public class EntityDBContext: DbContext
     {
         // You can add custom code to this file. Changes will not be overwritten.
         // 
@@ -17,11 +17,6 @@ namespace DALClassLibrary
 
         public EntityDBContext() : base("DefaultConnection")
         {
-        }
-
-        public static EntityDBContext Create()
-        {
-            return new EntityDBContext();
         }
 
         public System.Data.Entity.DbSet<Models.Entity1> Entity1 { get; set; }

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapWinFormsApplication", "MapWinFormsApplication\MapWinFormsApplication.csproj", "{983D0740-1806-4168-AB34-D16F8997B1E5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A2CD9239-FD86-45F8-88A6-8DA6F9774A96} = {A2CD9239-FD86-45F8-88A6-8DA6F9774A96}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DALClassLibrary", "DALClassLibrary\DALClassLibrary.csproj", "{535731E4-005B-4631-9C3A-2221A401CBC1}"
 EndProject

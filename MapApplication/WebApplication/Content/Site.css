@@ -9,3 +9,9 @@ body {
     width: 100%;
     height: 100%;
 }
+.BMap_bubble_content {
+    margin: 10px 5px;
+}
+.BMap_bubble_content * {
+    margin: 0;
+}

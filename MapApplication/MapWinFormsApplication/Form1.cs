@@ -18,7 +18,12 @@ namespace MapWinFormsApplication
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            this.Text = "Loading...";
+            ServiceReference.WebServiceSoapClient client = new ServiceReference.WebServiceSoapClient();
+            entity1ViewModelBindingSourceShangHai.DataSource = client.GetDevicesByCity("上海");
+            entity1ViewModelBindingSourceNanJing.DataSource = client.GetDevicesByCity("南京");
+            this.Text = "Finish";
+            client.Close();
         }
     }
 }

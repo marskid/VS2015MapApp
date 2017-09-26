@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Services;
+using DALClassLibrary;
 using DALClassLibrary.DAL;
 using DALClassLibrary.Models;
 using WebApplication.Models;
@@ -19,7 +20,15 @@ namespace WebApplication
     [System.Web.Script.Services.ScriptService]
     public class WebService : System.Web.Services.WebService
     {
-        DeviceOperator E1 = new DeviceOperator();
+        private DeviceOperator Device;
+        private CityOperator City;
+
+        public WebService()
+        {
+            Device = new DeviceOperator();
+            City = new CityOperator();
+        }
+
         [WebMethod]
         public Entity1ViewModel HelloWorld()
         {
@@ -39,7 +48,7 @@ namespace WebApplication
         [WebMethod]
         public Entity1ViewModel AddDevice(string deviceName, string longitude, string latitude, string cityName, string zoomLevel)
         {
-            var entity = E1.Add(deviceName, longitude, latitude, cityName, zoomLevel);
+            var entity = Device.Add(deviceName, longitude, latitude, cityName, zoomLevel);
 
             return new Entity1ViewModel(entity);
         }
@@ -47,7 +56,19 @@ namespace WebApplication
         [WebMethod]
         public List<Entity1ViewModel> GetDevices()
         {
-            return E1.GetAll().Select(s => new Entity1ViewModel(s)).ToList();
+            return Device.GetAll().Select(s => new Entity1ViewModel(s)).ToList();
+        }
+
+        [WebMethod]
+        public List<Entity2ViewModel> GetCities()
+        {
+            return City.GetAll().Select(s => new Entity2ViewModel(s)).ToList();
+        }
+
+        [WebMethod]
+        public List<Entity1ViewModel> GetDevicesByCity(string city)
+        {
+            return Device.Get(city).Select(s => new Entity1ViewModel(s)).ToList();
         }
     }
 }

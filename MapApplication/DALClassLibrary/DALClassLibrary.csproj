@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\CityOperator.cs" />
     <Compile Include="DAL\DeviceOperator.cs" />
     <Compile Include="DAL\EntityDBContext.cs" />
     <Compile Include="Models\Entity1.cs">
