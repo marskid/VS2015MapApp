@@ -12,11 +12,11 @@
 	<script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js"></script>
 </head>
 <body>
-
     <div id="baiduMap" class="map"></div>
 
-    <form id="form1" runat="server">
+    <textarea name="message" rows="2" style="display:none;"></textarea>
 
+    <form id="form1" runat="server">
         <asp:ScriptManager ID="ScriptManager1" runat="server">
             <Scripts>
                 <asp:ScriptReference Path="~/Scripts/main.js" />
