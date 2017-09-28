@@ -14,9 +14,43 @@
         Web Browser      WinForm
 ```
 
-## Web Service
+## [Web Service](https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/interoperating-with-asmx-web-services)
 
 * [WebService.asmx](https://github.com/marskid/VS2015MapApp/blob/master/MapApplication/WebApplication/WebService.asmx.cs)
+
+```
+    [WebService(Namespace = "http://tempuri.org/")]
+    [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
+    [System.ComponentModel.ToolboxItem(false)]
+    // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
+    [System.Web.Script.Services.ScriptService]
+    public class WebService : System.Web.Services.WebService
+    {
+        private DeviceOperator Device;
+        private CityOperator City;
+
+        public WebService()
+        {
+            Device = new DeviceOperator();
+            City = new CityOperator();
+        }
+
+        [WebMethod]
+        public Entity1ViewModel HelloWorld()
+        {
+            return new Entity1ViewModel() {
+                Id = 1,
+                name = "P1",
+                longitude = "31.294247596015893",
+                latitude = "121.37798305482751",
+                Entity2 = new Entity2ViewModel() {
+                    Id = 1,
+                    name = "上海",
+                    zoom = "12"
+                }
+            };
+        }
+```
 
 * [ASP.NET Service Reference](https://github.com/marskid/VS2015MapApp/blob/master/MapApplication/WebApplication/Index.aspx)
 
@@ -53,7 +87,7 @@ WebApplication.WebService.GetDevices(onSuccess, onError);
 
 ## [Using Web Browser in WinForm](https://github.com/marskid/VS2015MapApp/blob/master/MapApplication/MapWinFormsApplication/Form1.cs)
 
-* InvokeScript
+* [InvokeScript](https://msdn.microsoft.com/en-us/library/cc491132(v=vs.110).aspx)
 
 ```
     private void dataGridView1_CellEnter(object sender, DataGridViewCellEventArgs e)
@@ -63,7 +97,7 @@ WebApplication.WebService.GetDevices(onSuccess, onError);
         webBrowser1.Document.InvokeScript("moveToMarker", new object[] { longitude, latitude });
     }
 ```
-* AttachEventHandler
+* [AttachEventHandler](https://msdn.microsoft.com/en-us/library/system.windows.forms.htmldocument.attacheventhandler(v=vs.110).aspx)
 
 ```
     private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
