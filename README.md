@@ -1,6 +1,6 @@
 # VS2015MapApp
 
-！[BaiduMapWinForm](https://raw.githubusercontent.com/marskid/marskid.github.io/master/2017/09/BaiduMapWinForm.png)
+![BaiduMapWinForm](https://raw.githubusercontent.com/marskid/marskid.github.io/master/2017/09/BaiduMapWinForm.png)
 
 ## Structure
 
@@ -51,7 +51,7 @@ WebApplication.WebService.GetDevices(onSuccess, onError);
     }
 ```
 
-## Using Web Browser in WinForm
+## [Using Web Browser in WinForm](https://github.com/marskid/VS2015MapApp/blob/master/MapApplication/MapWinFormsApplication/Form1.cs)
 
 * InvokeScript
 
