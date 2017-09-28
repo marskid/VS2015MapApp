@@ -10,8 +10,10 @@
         Map Page        Web Service
           |              /
           |    Service Reference
-          |     /           |
-        Web Browser      WinForm
+          |     /        /  
+        Web Browser    /
+                \    /
+                WinForm
 ```
 
 ## [Web Service](https://docs.microsoft.com/en-us/dotnet/framework/wcf/samples/interoperating-with-asmx-web-services)
