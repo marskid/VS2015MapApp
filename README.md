@@ -1,6 +1,6 @@
 # VS2015MapApp
 
-![BaiduMapWinForm](https://raw.githubusercontent.com/marskid/marskid.github.io/master/2017/09/BaiduMapWinForm.png)
+![BaiduMapWinForm](https://raw.githubusercontent.com/marskid/marskid.github.io/master/2017/09/BaiduMapWinForm2.gif)
 
 ## Structure
 
